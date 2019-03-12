@@ -5,11 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>New blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/hover.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/font-awesome.min.css">
     
 </head>
 <body>
-
-    <script src="main.js"></script>
+    <div class="header-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"><a href=""><i class="fa fa-twitter"></i></a></div>
+                <div class="col-10">
+                    <div class="nav-search-wrapper">
+                        <form action="">
+                            <div class="input-group mb-3 animated fadeInRight">
+                                <div class="input-group-prepend">
+                                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></button>
+                                </div>
+                                <input type="text" class=" form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                        <button class="search-toggle-one animated fadeInRight"><i class="fa fa-search"></i></button>
+                        <button class="search-toggle-two animated fadeInRight"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">UDUAKS MOVIE REVIEWS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""><i class="fa fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <script></script>
+    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $(".search-toggle-two").css({"display": "none"}),
+          $(".search-toggle-one").click(function(){
+            $("form").css({"display": "inline"}),
+            $(".search-toggle-one").css({"display": "none"});
+            $(".search-toggle-two").css({"display": "block"});
+          });
+          $(".search-toggle-two").click(function(){
+            $("form").css({"display": "none"}),
+            $(".search-toggle-one").css({"display": "block"});
+            $(".search-toggle-two").css({"display": "none"});
+          });
+        });
+    </script>
 </body>
 </html>
